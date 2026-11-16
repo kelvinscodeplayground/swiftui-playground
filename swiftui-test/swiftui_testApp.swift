@@ -11,7 +11,8 @@ import SwiftUI
 struct swiftui_testApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // ContentView()
+            GueseTheMovieView()
         }
     }
 }
