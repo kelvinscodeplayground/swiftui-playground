@@ -20,7 +20,6 @@ struct TodoListView: View {
             }
         }
         .padding()
-        .cornerRadius(25)
         .overlay {
             if isLoading {
                 ProgressView("Loading...")

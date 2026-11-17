@@ -43,7 +43,7 @@ struct TodoItem: View {
                 }
             }
             .frame(width: 100, height: 100)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .cornerRadius(10)
 
             VStack(alignment: .leading) {
                 Text(props.title)
@@ -56,8 +56,8 @@ struct TodoItem: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(maxWidth: .infinity)
-        .cornerRadius(20)
         .padding()
         .background(Color(red: 0.97, green: 0.97, blue: 0.97))  // f8f8f8
+        .cornerRadius(20)
     }
 }
