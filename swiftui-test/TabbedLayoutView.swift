@@ -17,6 +17,13 @@ struct TabbedLayoutView: View {
                 }
             }
 
+            Tab("Todos", systemImage: "checkmark.circle") {
+                NavigationStack {
+                    TodoListView()
+                        .navigationTitle("Todos")
+                }
+            }
+
             Tab("Favorites", systemImage: "star.fill") {
                 NavigationStack {
                     Text("Second Tab")
