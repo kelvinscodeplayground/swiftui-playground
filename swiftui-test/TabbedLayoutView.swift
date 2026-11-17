@@ -9,22 +9,21 @@ import SwiftUI
 
 struct TabbedLayoutView: View {
     var body: some View {
-        NavigationStack {
-            TabView {
-                ListView()
-                    .tabItem {
-                        Image(systemName: "list.bullet")
-                        Text("List")
-                    }
-
-                Text("Second Tab")
-                    .tabItem {
-                        Image(systemName: "star.fill")
-                        Text("Favorites")
-                    }
+        TabView {
+            Tab("List", systemImage: "list.bullet") {
+                NavigationStack {
+                    ListView()
+                        .navigationTitle("Tabbed List View")
+                }
             }
-            .navigationTitle("Tabbed Layout View")
-            .navigationBarTitleDisplayMode(.inline)
+
+            Tab("Favorites", systemImage: "star.fill") {
+                NavigationStack {
+                    Text("Second Tab")
+                        .navigationTitle("Favorites")
+                        .navigationBarTitleDisplayMode(.inline)
+                }
+            }
         }
     }
 }

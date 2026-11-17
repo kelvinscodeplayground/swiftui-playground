@@ -12,7 +12,8 @@ struct swiftui_testApp: App {
     var body: some Scene {
         WindowGroup {
             // ContentView()
-            GueseTheMovieView()
+            // GueseTheMovieView()
+            TabbedLayoutView()
         }
     }
 }
